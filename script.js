@@ -1,12 +1,14 @@
-const resizeHeader = document.getElementsByTagName('h1')[0]
+const sizeInfoDiv = document.getElementById('sizeInfo')
+
+const resizeHeader = sizeInfoDiv.appendChild(document.createElement('h1'))
 
 let x = innerWidth
 let y = innerHeight
 resizeHeader.innerHTML = `Width: ${x} and Height: ${y}`
 
 window.addEventListener('resize',() => {
-    let x = innerWidth
-    let y = innerHeight
+    x = innerWidth
+    y = innerHeight
     resizeHeader.innerHTML = `Width: ${x} and Height: ${y}`
 })
 
